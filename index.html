@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asaichi Check</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/weather-icons.min.css" />
+    <script src="assets/src/common.js" defer></script>
+    <script src="assets/src/bg.js" defer></script>
+    <script src="assets/src/time.js" defer></script>
+    <script src="assets/src/weather.js" defer></script>
+    <script src="assets/src/quote.js" defer></script>
+    <script src="assets/src/todolist.js" defer></script>
+    <script src="assets/src/text.js" defer></script>
+  </head>
+  <body>
+    <div class="loading"></div>
+    <header id="header">
+      <h1 class="sr-only">検索のバーと天気情報</h1>
+      <div class="header__search">
+        <button class="header__toggle" type="button">Googleで検索</button>
+        <div class="header__form-container">
+          <form
+            class="header__form"
+            action="https://www.google.com/search"
+            method="GET"
+          >
+            <input class="header__form--input" type="search" />
+            <button class="header__form--btn" type="submit"></button>
+          </form>
+        </div>
+      </div>
+      <div class="header__weather">
+        <div class="header__weather--container">
+          <i class="header__weather--ico wi"></i>
+          <div class="header__weather--temperature"></div>
+        </div>
+        <div class="header__weather--location"></div>
+      </div>
+    </header>
+    <section class="container-top">
+      <h1 class="container-top--time"></h1>
+      <form
+        class="container-top__greeting"
+        action=""
+        method="get"
+        name="greeting"
+      >
+        <h2 class="container-top__greeting--text">
+          ビズチェックへようこそ。
+        </h2>
+        <input
+          class="container-top__greeting--input"
+          type="text"
+          placeholder="What's Your Name ?"
+          name="name"
+          autocomplete="off"
+          required
+        />
+        <button
+          class="container-top__greeting--edit hide"
+          type="button"
+          data-type="edit"
+        ></button>
+      </form>
+    </section>
+    <section class="container-bottom">
+      <h1 class="sr-only">壁イメージの情報と名、ToDo</h1>
+      <div class="container-bottom--description">
+        <a href="#n" class="container-bottom--location" target="_blanks">
+          <span class="bg-location"></span>
+          <span class="bg-user"></span>
+        </a>
+      </div>
+      <blockquote
+        class="container-bottom--text"
+        cite="https://favqs.com/quotes/mahatma-gandhi/58657-truth-never-d-"
+      >
+        <p class="container-bottom--quote"></p>
+        <cite class="container-bottom--author"></cite>
+      </blockquote>
+      <div class="container-bottom--container">
+        <button class="container-bottom--toggle">Check</button>
+        <div class="container-bottom--container__position">
+          <div class="container-bottom--container__container">
+            <header class="container-bottom--container__container--header">
+              <h2 class="container-bottom--container__container--title">
+                CheckList
+              </h2>
+            </header>
+            <form
+              class="container-bottom--container__container--form"
+              action=""
+              method="get"
+            >
+              <ul class="container-bottom--container__container--list">
+                <p class="no-list">ここに入力してください 👇</p>
+              </ul>
+              <input
+                class="container-bottom--container__container--input"
+                type="text"
+                placeholder="チェックすることを入力してください"
+                required
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
